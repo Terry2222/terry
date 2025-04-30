@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>이벤트 페이지</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .image-section {
+      width: 100%;
+      height: 100vh;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #555;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff6600;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+
+    .floating-button:hover {
+      background-color: #e05a00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-section">이미지 1</div>
+  <div class="image-section">이미지 2</div>
+  <div class="image-section">이미지 3</div>
+  <div class="image-section">이미지 4</div>
+  <div class="image-section">이미지 5</div>
+
+  <button class="floating-button" onclick="window.open('https://google.com', '_blank')">
+    상담하기
+  </button>
+
+</body>
+</html>
