@@ -4,124 +4,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>테리 테스트 사이트</title>
+  <title>주식회사 한통</title>
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: sans-serif; }
 
     header {
-      width: 100%;
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      font-size: 20px;
+      background-color: #ffffff;
+      padding: 16px;
+      font-size: 24px;
       font-weight: bold;
-      padding: 16px 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
+      text-align: left;
+      padding-left: 20px;
+      border-bottom: 1px solid #ddd;
     }
 
     .gnb {
-      width: 100%;
-      background-color: #003380;
       display: flex;
       justify-content: center;
       gap: 40px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
       padding: 10px 0;
-      position: fixed;
-      top: 60px;
-      left: 0;
-      z-index: 999;
     }
 
     .gnb button {
       background: none;
       border: none;
-      color: white;
       font-size: 16px;
       cursor: pointer;
     }
 
-    .content {
-      padding-top: 120px;
+    .gnb button:hover {
+      color: #004aad;
     }
 
-    .image-section {
+    .hero {
       width: 100%;
       display: flex;
       justify-content: center;
-      background-color: #ffffff;
+      background-color: #000;
     }
 
-    .image-section img {
+    .hero img {
       width: 100%;
-      max-width: 768px;
+      max-width: 1200px;
       height: auto;
-      display: block;
     }
 
-    .floating-button {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #ff6600;
+    .brand-section {
+      overflow: hidden;
+      background-color: #f0f0f0;
+      padding: 20px 0;
+    }
+
+    .brand-row {
+      display: flex;
+      gap: 40px;
+      animation: move-left 20s linear infinite;
+    }
+
+    .brand-row.bottom {
+      animation: move-right 20s linear infinite;
+    }
+
+    .brand-row img {
+      height: 80px;
+      width: auto;
+    }
+
+    @keyframes move-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes move-right {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(50%); }
+    }
+
+    footer {
+      background-color: #1a1a1a;
       color: white;
-      padding: 15px 20px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
-    }
-
-    .floating-button:hover {
-      background-color: #e05a00;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <header>테리 테스트 사이트</header>
+<header>주식회사 한통</header>
 
-  <div class="gnb">
-    <button onclick="alert('아직 준비중이에요')">파트너사</button>
-    <button onclick="alert('아직 준비중이라니까요?')">연혁보기</button>
+<div class="gnb">
+  <button onclick="alert('아직 준비중인데용?')">회사소개</button>
+  <button onclick="alert('아직 준비중인데용?')">서빙로봇</button>
+  <button onclick="alert('아직 준비중인데용?')">하이오더</button>
+  <button onclick="alert('아직 준비중인데용?')">결합할인</button>
+  <button onclick="alert('아직 준비중인데용?')">이벤트</button>
+</div>
+
+<div class="hero">
+  <img src="2. 메인 비주얼 이미지.png" alt="메인 비주얼 이미지" />
+</div>
+
+<section class="brand-section">
+  <div class="brand-row">
+    <img src="3. 체휴업체이미지1.png" alt="제휴업체" /><img src="3. 체휴업체이미지2.png" alt="제휴업체" /><img src="3. 체휴업체이미지1.png" alt="제휴업체" /><img src="3. 체휴업체이미지2.png" alt="제휴업체" /><img src="3. 체휴업체이미지1.png" alt="제휴업체" /><img src="3. 체휴업체이미지2.png" alt="제휴업체" />
   </div>
+</section>
 
-  <div class="content">
-    
-    <div class="image-section">
-      <img src="005.jpg" alt="이벤트 이미지" />
-    </div>
-    
-    <div class="image-section">
-      <img src="004.jpg" alt="이벤트 이미지" />
-    </div>
-    
-    <div class="image-section">
-      <img src="003.jpg" alt="이벤트 이미지" />
-    </div>
-    
-    <div class="image-section">
-      <img src="002.jpg" alt="이벤트 이미지" />
-    </div>
-    
-    <div class="image-section">
-      <img src="001.jpg" alt="이벤트 이미지" />
-    </div>
-    
+<section class="brand-section">
+  <div class="brand-row bottom">
+    <img src="3. 체휴업체이미지2.png" alt="제휴업체" /><img src="3. 체휴업체이미지1.png" alt="제휴업체" /><img src="3. 체휴업체이미지2.png" alt="제휴업체" /><img src="3. 체휴업체이미지1.png" alt="제휴업체" /><img src="3. 체휴업체이미지2.png" alt="제휴업체" /><img src="3. 체휴업체이미지1.png" alt="제휴업체" />
   </div>
+</section>
 
-  <button class="floating-button" onclick="window.open('https://google.com', '_blank')">
-    상담하기
-  </button>
+<footer>
+  주식회사 한통 | Copyright © 주식회사 한통. All rights reserved.
+</footer>
 
 </body>
 </html>
