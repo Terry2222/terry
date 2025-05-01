@@ -21,11 +21,12 @@
 
     .gnb {
       display: flex;
-      justify-content: center;
       gap: 40px;
       background-color: #f9f9f9;
       border-bottom: 1px solid #ccc;
-      padding: 10px 0;
+      padding: 10px 20px;
+      overflow-x: auto;
+      white-space: nowrap;
     }
 
     .gnb button {
@@ -33,6 +34,8 @@
       border: none;
       font-size: 16px;
       cursor: pointer;
+      flex: 0 0 auto;
+      margin-right: 20px;
     }
 
     .gnb button:hover {
@@ -50,6 +53,22 @@
       width: 100%;
       max-width: 1200px;
       height: auto;
+    }
+
+    .middle-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+
+    .middle-section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .middle-section p {
+      font-size: 18px;
+      color: #555;
     }
 
     .brand-section {
@@ -90,7 +109,27 @@
       padding: 20px 0;
       font-size: 14px;
     }
-  </style>
+  
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ff6600;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+
+    .floating-button:hover {
+      background-color: #e05a00;
+    }
+</style>
 </head>
 <body>
 
@@ -106,6 +145,11 @@
 
 <div class="hero">
   <img src="2. 메인 비주얼 이미지.png" alt="메인 비주얼 이미지" />
+</div>
+
+<div class="middle-section">
+  <h2>KT 하이오더 & 서빙로봇</h2>
+  <p>KT니까 “믿고 쓰는” 프리미엄 테이블 오더 & 서빙로봇<br>대기업이 하면 다릅니다.</p>
 </div>
 
 <section class="brand-section">
@@ -124,5 +168,7 @@
   주식회사 한통 | Copyright © 주식회사 한통. All rights reserved.
 </footer>
 
+
+<button class="floating-button" onclick="alert('상담 기능은 곧 제공됩니다!')">상담 신청하기</button>
 </body>
 </html>
